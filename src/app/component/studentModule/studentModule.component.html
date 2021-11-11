@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="text-center m-2">List Student</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>class</th>
+      <th>teacher</th>
+      <th>Edit/Delete</th>
+    </tr>
+    <tr *ngFor="let item of model">
+      <td>{{ item.studentName }}</td>
+      <td>{{ item.classname }}</td>
+      <td>{{ item.teacherName }}</td>
+      <td>
+        <input type="button" value="Edit" (click)="onEdit(item.userId)" />
+        <input type="button" value="Delete" (click)="onDelete(item.userId)" />
+      </td>
+    </tr>
+  </table>
+  <div></div>
+  <input type="button" value="addlist" routerLink="addlist" />
+</div>

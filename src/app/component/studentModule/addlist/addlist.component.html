@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row mt-5">
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label for="formGroupExampleInput">student name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput"
+          placeholder="student name"
+          formControlName="student"
+        />
+        <div *ngIf="isInvaild" class="invalid">Please enter your student name</div>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">class name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput2"
+          placeholder="class name"
+          formControlName="class"
+        />
+        <div *ngIf="isInvaild" class="invalid">Please enter your class name</div>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput3">teacher name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput3"
+          placeholder="teacher name"
+          formControlName="teacher"
+        />
+        <div *ngIf="isInvaild" class="invalid">Please enter your teacher name</div>
+      </div>
+      <input type="submit" value="submit">
+      <input type="button" value="cancel" (click)="onCancel()">
+    </form>
+  </div>
+</div>
